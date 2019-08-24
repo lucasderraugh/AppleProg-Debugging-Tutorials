@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ChatListViewController" customModule="Lesson_5" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="wvg-mq-a7p" id="Ut4-Jx-xt5"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="579" height="444"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="55" horizontalPageScroll="10" verticalLineScroll="55" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWp-gq-nNa">
+                    <rect key="frame" x="0.0" y="0.0" width="579" height="444"/>
+                    <clipView key="contentView" id="1Ml-Fl-C7V">
+                        <rect key="frame" x="0.0" y="0.0" width="579" height="444"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="53" usesAutomaticRowHeights="YES" viewBased="YES" id="wvg-mq-a7p">
+                                <rect key="frame" x="0.0" y="0.0" width="579" height="444"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <size key="intercellSpacing" width="3" height="2"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn width="576" minWidth="40" maxWidth="1000" id="NK1-Ti-1Xl">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Sender">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="cub-Od-h7x">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <prototypeCellViews>
+                                            <tableCellView identifier="TableCellIdentifier" id="TAP-Mw-hqA" customClass="TableCell" customModule="Lesson_5" customModuleProvider="target">
+                                                <rect key="frame" x="1" y="1" width="576" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="j40-SJ-3x4">
+                                                        <rect key="frame" x="18" y="26" width="514" height="22"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Name" id="TFH-SX-g9L">
+                                                            <font key="font" metaFont="system" size="18"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="naP-DB-vT0">
+                                                        <rect key="frame" x="18" y="5" width="514" height="17"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Message" id="YrV-26-93g">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-38-FRl" customClass="Toggle" customModule="Lesson_5" customModuleProvider="target">
+                                                        <rect key="frame" x="538" y="12" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="XO2-RC-Din"/>
+                                                            <constraint firstAttribute="width" constant="30" id="rFs-9l-UPI"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="Star" imagePosition="only" alignment="center" alternateImage="StarFilled" imageScaling="axesIndependently" inset="2" id="Gs9-VV-R5t">
+                                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="naP-DB-vT0" firstAttribute="top" secondItem="j40-SJ-3x4" secondAttribute="bottom" constant="4" id="0ZM-Qf-yw7"/>
+                                                    <constraint firstItem="naP-DB-vT0" firstAttribute="leading" secondItem="TAP-Mw-hqA" secondAttribute="leading" constant="20" symbolic="YES" id="3pV-68-XuR"/>
+                                                    <constraint firstItem="jbi-38-FRl" firstAttribute="centerY" secondItem="TAP-Mw-hqA" secondAttribute="centerY" id="Eqy-7u-MmA"/>
+                                                    <constraint firstItem="j40-SJ-3x4" firstAttribute="top" secondItem="TAP-Mw-hqA" secondAttribute="top" constant="5" id="LtD-at-Xdt"/>
+                                                    <constraint firstItem="jbi-38-FRl" firstAttribute="leading" secondItem="j40-SJ-3x4" secondAttribute="trailing" constant="8" id="VnQ-m9-OBZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jbi-38-FRl" secondAttribute="trailing" constant="8" id="f8z-Px-QI0"/>
+                                                    <constraint firstItem="jbi-38-FRl" firstAttribute="leading" secondItem="naP-DB-vT0" secondAttribute="trailing" constant="8" id="fSM-MN-YhI"/>
+                                                    <constraint firstItem="j40-SJ-3x4" firstAttribute="leading" secondItem="TAP-Mw-hqA" secondAttribute="leading" constant="20" symbolic="YES" id="mhh-6z-tz5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="naP-DB-vT0" secondAttribute="bottom" constant="5" id="rvw-iL-sZE"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="messageLabel" destination="naP-DB-vT0" id="02e-nz-cZG"/>
+                                                    <outlet property="nameLabel" destination="j40-SJ-3x4" id="r1N-gD-2JX"/>
+                                                    <outlet property="textField" destination="j40-SJ-3x4" id="HNC-ER-9oc"/>
+                                                    <outlet property="toggle" destination="jbi-38-FRl" id="USs-VH-Pgy"/>
+                                                </connections>
+                                            </tableCellView>
+                                        </prototypeCellViews>
+                                    </tableColumn>
+                                </tableColumns>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="TAW-M9-9Bk"/>
+                                    <outlet property="delegate" destination="-2" id="rpH-LF-90u"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="A8f-fp-wYt">
+                        <rect key="frame" x="0.0" y="428" width="579" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Er9-rQ-PbN">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nWp-gq-nNa" secondAttribute="trailing" id="K1e-n5-XKr"/>
+                <constraint firstAttribute="bottom" secondItem="nWp-gq-nNa" secondAttribute="bottom" id="QaE-0C-XsP"/>
+                <constraint firstItem="nWp-gq-nNa" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="UBD-fn-vsP"/>
+                <constraint firstItem="nWp-gq-nNa" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="bcc-Hm-Gpt"/>
+            </constraints>
+            <point key="canvasLocation" x="126.5" y="120"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="Star" width="100" height="100"/>
+        <image name="StarFilled" width="100" height="100"/>
+    </resources>
+</document>

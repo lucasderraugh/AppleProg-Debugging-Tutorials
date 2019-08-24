@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ChatDetailsViewController" customModule="Lesson_5" customModuleProvider="target">
+            <connections>
+                <outlet property="favoriteButton" destination="51J-00-dbG" id="bHN-nt-GGF"/>
+                <outlet property="messagesLabel" destination="R3n-54-joi" id="Ne6-eb-ZRq"/>
+                <outlet property="nameLabel" destination="LfW-xk-HkD" id="hkg-ZP-0mt"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LfW-xk-HkD">
+                    <rect key="frame" x="18" y="45" width="406" height="24"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="QiL-vC-Y0k">
+                        <font key="font" metaFont="system" size="20"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="R3n-54-joi">
+                    <rect key="frame" x="18" y="20" width="444" height="17"/>
+                    <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="Eex-Xy-3rh">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="51J-00-dbG" customClass="Toggle" customModule="Lesson_5" customModuleProvider="target">
+                    <rect key="frame" x="430" y="42" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="pyr-OY-50T"/>
+                        <constraint firstAttribute="width" constant="30" id="wdv-Ub-XvP"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="Star" imagePosition="overlaps" alignment="center" alternateImage="StarFilled" imageScaling="proportionallyDown" inset="2" id="nlX-jy-bJ7">
+                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="R3n-54-joi" firstAttribute="top" secondItem="LfW-xk-HkD" secondAttribute="bottom" constant="8" id="IKG-5J-dR3"/>
+                <constraint firstAttribute="bottom" secondItem="R3n-54-joi" secondAttribute="bottom" constant="20" id="RCI-cy-8Pg"/>
+                <constraint firstAttribute="trailing" secondItem="R3n-54-joi" secondAttribute="trailing" constant="20" id="Y8w-UG-E95"/>
+                <constraint firstItem="51J-00-dbG" firstAttribute="centerY" secondItem="LfW-xk-HkD" secondAttribute="centerY" id="ZNx-Nj-uXR"/>
+                <constraint firstItem="51J-00-dbG" firstAttribute="leading" secondItem="LfW-xk-HkD" secondAttribute="trailing" constant="8" symbolic="YES" id="eCg-Wk-jZu"/>
+                <constraint firstItem="LfW-xk-HkD" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="eLC-hy-cOj"/>
+                <constraint firstItem="LfW-xk-HkD" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="nHk-l8-OnC"/>
+                <constraint firstAttribute="trailing" secondItem="51J-00-dbG" secondAttribute="trailing" constant="20" symbolic="YES" id="xZb-Hb-YcE"/>
+                <constraint firstItem="R3n-54-joi" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="xeI-K4-HJe"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="153.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="Star" width="100" height="100"/>
+        <image name="StarFilled" width="100" height="100"/>
+    </resources>
+</document>
