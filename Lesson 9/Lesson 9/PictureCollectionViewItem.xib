@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PictureCollectionViewItem" customModule="Lesson_9" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="OfV-oc-XMB" id="5xL-Y6-kue"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="211"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-oc-XMB">
+                    <rect key="frame" x="5" y="5" width="396" height="201"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="weX-fG-Z1b"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OfV-oc-XMB" secondAttribute="trailing" constant="5" id="cPc-Zh-zvD"/>
+                <constraint firstAttribute="bottom" secondItem="OfV-oc-XMB" secondAttribute="bottom" constant="5" id="j35-XQ-tae"/>
+                <constraint firstItem="OfV-oc-XMB" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="k1l-A1-S9J"/>
+                <constraint firstItem="OfV-oc-XMB" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="5" id="m32-nf-28D"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="123.5"/>
+        </customView>
+    </objects>
+</document>
